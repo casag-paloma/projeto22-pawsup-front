@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
+import Header from "./header/Header";
 
 export default function HomePage(){
 
@@ -33,10 +34,11 @@ export default function HomePage(){
     const toRenderCats = renderCats();
     return(
         <Container>
-            <Header>
+            <Header/>
+            <HeaderTitle>
             <h1> Bem vindo ao Paws UP</h1>
             <h5> Escolha um aumiguinho e entre em contato com o abrigo para fazer sua audoção</h5>
-            </Header>
+            </HeaderTitle>
             {toRenderCats}
             
         </Container>
@@ -57,5 +59,5 @@ return(
 
 
 const Container = styled.div``
-const Header = styled.div``
+const HeaderTitle = styled.div``
 const CatBox = styled.div``

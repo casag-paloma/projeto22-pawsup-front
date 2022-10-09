@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {useParams, useNavigate} from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "./header/Header";
 
 export default function CatPage(){
     const {catId} = useParams();
@@ -41,6 +42,7 @@ export default function CatPage(){
     }
     return(
         <Container>
+            <Header/>
             {toRenderCat}
             <button onClick={()=> goToFormFunction(catData.id)}> Tenho interesse</button>
         </Container>

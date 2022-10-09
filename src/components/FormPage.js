@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {useParams, useNavigate} from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import Header from "./header/Header";
 
 export default function FormPage(){
     const {catId} = useParams();
@@ -62,6 +63,7 @@ export default function FormPage(){
     }
     return(
         <Container>
+            <Header/>
             {form}
         </Container>
     );
