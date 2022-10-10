@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import styled from "styled-components";
 import UserContext from "../../contexts/userContext";
+import UserArea from "./UserArea";
 
 export default function Header(){
     const logo = "https://tinyurl.com/paws-up-logo";
@@ -14,7 +15,7 @@ export default function Header(){
     }, [])
     return(
         <HeaderStyle>
-            {isLogged? <div> Área do Usuário</div>: 
+            {isLogged? <UserArea/>: 
             <div></div>}
             <Logo to={'/'}>
             <img src={logo} alt="Paws Up Logo"/>
